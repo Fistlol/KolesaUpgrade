@@ -5,7 +5,7 @@ use function PHPUnit\Framework\equalTo;
 class SearchBlouseCest
 {
     /*  
-        Проверить поиск по тексту и количеству найденных элементов
+        Найти товар "Blouse", открыть модальное окно с этим товаром и проверить, что это нужный товар
     */
 
     public function checkBlouseOnPage(AcceptanceTester $I)
