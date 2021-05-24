@@ -2,6 +2,10 @@
 
 class SearchDressesCest
 {
+    /*  
+        Проверить поиск по тексту и количеству найденных элементов
+    */
+    
     // tests
     public function checkNumberOfDresses(FunctionalTester $I)
     {
