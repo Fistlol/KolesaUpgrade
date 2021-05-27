@@ -4,8 +4,8 @@ use function PHPUnit\Framework\equalTo;
 
 class SearchBlouseCest
 {
-    /*  
-        Найти товар "Blouse", открыть модальное окно с этим товаром и проверить, что это нужный товар
+    /**  
+     * Найти товар "Blouse", открыть модальное окно с этим товаром и проверить, что это нужный товар
     */
 
     public function checkBlouseOnPage(AcceptanceTester $I)
@@ -16,7 +16,6 @@ class SearchBlouseCest
         $I->click('#homefeatured > li:nth-child(2) > div > div.left-block > div > a.quick-view');
         $I->waitForElementVisible('#index > div.fancybox-overlay.fancybox-overlay-fixed > div');
         $I->switchToIFrame('.fancybox-iframe');
-        
-        codecept_debug($I->grabTextFrom('h1'));
+        $I->waitForText('Blouse', 10, 'h1');
     }
 }
