@@ -19,7 +19,7 @@ jobs:
           chromedriver --headless --no-sandbox --disable-dev-shm-usage --url-base=/wd/hub &
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
       - name: Run Test Cases
-        run: php vendor/bin/codecept run --steps -vvv --xml
+        run: php vendor/bin/codecept run acceptance --steps -vvv --xml
       - name: JUnit Report Action
         if: always()
         uses: mikepenz/action-junit-report@v2.4.2
