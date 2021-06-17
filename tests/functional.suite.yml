@@ -8,5 +8,7 @@
 actor: FunctionalTester
 modules:
     enabled:
+        - PhpBrowser:
+            url: http://automationpractice.com/index.php
         - \Helper\Functional
     step_decorators: ~        
