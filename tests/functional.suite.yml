@@ -9,6 +9,6 @@ actor: FunctionalTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://automationpractice.com/index.php
+            url: https://www.saucedemo.com/
         - \Helper\Functional
     step_decorators: ~        
