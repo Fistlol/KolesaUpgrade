@@ -8,7 +8,5 @@
 actor: FunctionalTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: https://www.saucedemo.com/
         - \Helper\Functional
     step_decorators: ~        
