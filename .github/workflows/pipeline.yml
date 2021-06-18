@@ -1,5 +1,5 @@
 name: Workflow
-on: [push, pull_request]
+on: [push]
       
 jobs: 
   buildAndTest:
@@ -18,7 +18,6 @@ jobs:
           export DISPLAY=:99
           chromedriver --headless --no-sandbox --disable-dev-shm-usage --url-base=/wd/hub &
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 &
-        run: nohup $CHROMEWEBDRIVER/chromedriver --url-base=/wd/hub /dev/null 2>&1 &
       - name: Run Test Cases
         run: php vendor/bin/codecept run --steps -vvv --xml
       - name: JUnit Report Action
